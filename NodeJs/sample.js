@@ -1,28 +1,15 @@
-var http=require("http");
 var express=require("express");
-//var qs=require("qs");
-var host="127.0.0.1";
-/*
-var server=http.createServer(function(req,res){
-var body="";
-if(req.method=='POST')
-	{
-		req.on('data',function(chunk){
-			body+=chunk;
-		});
-	req.on('end',function () {
-		var 	name=qs.parse(body).usr;
-		console.log("Your name is "+name);
-				});	
+var app=express();
+app.use(express.json());
+app.use(express.urlencoded());
+app.post('/',function(req,res){
+	if(req.method=='POST'){
+		console.log("Your name is "+req.body.usr);
+				}
+	res.send(404,"Hello User");
 	
-		}
-console.log("Hello Chirag!!");
-res.writeHead(200,{"Content-type":"text/plain"});
-res.end("Hello World!!");
+	
+	
 });
-
-server.listen(8080,host,function(){
-	console.log("Listening");
-});
-
-*/
+console.log("Listening on port 8080");
+app.listen(8080,"127.0.0.1");
