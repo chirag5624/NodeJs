@@ -1,6 +1,4 @@
 var https=require('https');
-var prettyjson=require('prettyjson');
-var color=require('./prettyjson/node_modules/colors');
 var fs=require('fs');
 //var access_token='';
 var options={
@@ -15,19 +13,19 @@ var option={
 
 		};		
 		
-	/*
+
 		
-https.createServer(options,function(req,res){
+https.createServer(option,function(req,res){
 	console.log("Server received a request "+req.url);
-	//res.writeHead(200);	
+	//console.log(notify-send);
 	res.end('Hello User!! Did the program run?');
 
 
 
 
 }).listen(8080);
-*/
 
+/*
 https.get(options,function(res){
 	var body='';
 	res.on('data',function(chunk){
@@ -36,8 +34,8 @@ https.get(options,function(res){
 	
 	res.on('end',function(){
 	var obj=JSON.parse(body);	
-	console.log(obj['name'] );
-	for(var attr in obj){console.log(attr+": "+obj[attr]+"\n");}	
+	console.log(notify-send);
+	//for(var attr in obj){console.log(attr+": "+obj[attr]+"\n");}	
 	
 	
 	});
@@ -45,4 +43,5 @@ https.get(options,function(res){
 	
 }).on('error',function(e){console.log("Error is: "+e)});
 
+*/
 console.log("Server running on port 8080");	
